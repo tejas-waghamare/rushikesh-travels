@@ -1,18 +1,4 @@
-// export default function Contact() {
-//   return (
-//     <div className=" py-45 px-6 max-w-3xl mx-auto">
-//       <h2 className="text-3xl font-bold mb-4 text-center">Contact Us</h2>
-//       <p className="text-center text-gray-600 mb-6">Get in touch with us for bookings and enquiries</p>
-//       <div className="bg-gray-100 p-6 rounded-xl shadow text-center">
-//         <p><strong>Owner:</strong> Sanjay Paygude</p>
-//         <p><strong>Phone:</strong> <a href="tel:+919765494008">+91 9765494008</a>, <a href="tel:+91888120979">+91 8888120979</a></p>
-//         <p><strong>Email:</strong> <a href="mailto:rushikeshtansport4008@gmail.com">rushikeshtansport4008@gmail.com</a></p>
-//         <p><strong>Address:</strong> Hingane Home Colony, Karve Nagar, Pune 411052</p>
-//       </div>
-//     </div>
-//   );
-// }
-
+import React from 'react'
 
 export default function Contact() {
   const contactInfo = [
@@ -78,7 +64,7 @@ export default function Contact() {
   ];
 
   return (
-    <section className="py-20 mt-4 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-20 md:py-20 mt-4 bg-gradient-to-b from-gray-100 to-white">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -90,10 +76,10 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid p-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-6">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
               
               <div className="space-y-6">

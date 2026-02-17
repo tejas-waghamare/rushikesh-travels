@@ -441,6 +441,7 @@ const Quote = () => {
     const maharashtraLocations = [
         { id: 'mumbai', name: 'Mumbai', distance: '150 km', travelTime: '3-4 hours' },
         { id: 'nagpur', name: 'Nagpur', distance: '700 km', travelTime: '12-14 hours' },
+        { id: 'lonavla', name: 'Lonavla', distance: '65 km', travelTime: '1:30-2 hours' },
         { id: 'nashik', name: 'Nashik', distance: '210 km', travelTime: '4-5 hours' },
         { id: 'aurangabad', name: 'Aurangabad', distance: '240 km', travelTime: '5-6 hours' },
         { id: 'kolhapur', name: 'Kolhapur', distance: '230 km', travelTime: '5-6 hours' },

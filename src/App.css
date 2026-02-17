@@ -54,3 +54,12 @@
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
           background: #dc2626;
         }
+
+
+
+        @media (min-width: 320px) and (max-width: 374px) {
+          .xs\\:text-sm { font-size: 0.8125rem; }
+          .xs\\:inline { display: inline; }
+          .xs\\:block { display: block; }
+          .xs\\:max-w-\\[220px\\] { max-width: 220px; }
+        }

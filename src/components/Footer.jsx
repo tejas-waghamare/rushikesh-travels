@@ -96,11 +96,11 @@ const Footer = () => {
               </p>
               <p className="flex items-center">
                 <span className="text-red-500 mr-3">✉️</span>
-                <a href="mailto:info@rushikeshtours.com" className="hover:text-red-500 transition">info@rushikeshtours.com</a>
+                <a href="mailto:rushikeshtransport4008@gmail.com" className="hover:text-red-500 transition">rushikeshtransport4008@gmail.com</a>
               </p>
               <p className="flex items-center">
                 <span className="text-red-500 mr-3">📍</span>
-                <span>Pune, Maharashtra - 411001</span>
+                <span>Hingane Home Colony,Karve Nagar,Pune 411052</span>
               </p>
             </div>
           </div>

@@ -181,6 +181,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/RTlogo2.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -240,7 +241,7 @@ export default function Navbar() {
         >
           <div className="relative">
             <div className="w-15 h-15 bg-gradient-to-br from-yellow-100 to-white rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300 shadow-lg">
-              <span className="text-white font-bold text-lg"><img src="/src/assets/RTlogo2.png" alt="Rushikesh Logo" className="w-15 h-15 rounded-lg" /></span>
+              <span className="text-white font-bold text-lg"><img src={logo} alt="Rushikesh Logo" className="w-15 h-15 rounded-lg" /></span>
             </div>
           </div>
           <div className="flex flex-col">

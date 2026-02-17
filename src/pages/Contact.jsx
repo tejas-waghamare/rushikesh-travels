@@ -219,6 +219,248 @@
 //   );
 // }
 
+// import React from 'react';
+// import { Link } from 'react-router-dom';
+
+// export default function Contact() {
+//   const contactInfo = [
+//     {
+//       icon: "👤",
+//       title: "Owner",
+//       value: "Mr. Sanjay Paygude",
+//       link: null
+//     },
+//     {
+//       icon: "📞",
+//       title: "Phone",
+//       value: "+91 97654 94008",
+//       link: "tel:+919765494008",
+//       secondary: {
+//         value: "+91 88881 20979",
+//         link: "tel:+918888120979"
+//       }
+//     },
+//     {
+//       icon: "📧",
+//       title: "Email",
+//       value: "rushikeshtransport4008@gmail.com",
+//       link: "mailto:rushikeshtransport4008@gmail.com"
+//     },
+//     {
+//       icon: "📍",
+//       title: "Address",
+//       value: "Hingane Home Colony, Karve Nagar, Pune 411052",
+//       link: "https://maps.google.com/?q=Hingane+Home+Colony,Karve+Nagar,Pune+411052"
+//     }
+//   ];
+
+//   const quickActions = [
+//     {
+//       icon: "📞",
+//       title: "Call Now",
+//       description: "Speak directly with us",
+//       link: "tel:+919765494008",
+//       external: true,
+//       color: "bg-green-500 hover:bg-green-600"
+//     },
+//     {
+//       icon: "💬",
+//       title: "WhatsApp",
+//       description: "Quick chat & quotes",
+//       link: "https://wa.me/919765494008",
+//       external: true,
+//       color: "bg-green-600 hover:bg-green-700"
+//     },
+//     {
+//       icon: "🚐",
+//       title: "Book Now",
+//       description: "Instant booking",
+//       link: "/booking",
+//       external: false,
+//       color: "bg-red-600 hover:bg-red-700"
+//     },
+//     {
+//       icon: "📅",
+//       title: "Get Quote",
+//       description: "Best price guarantee",
+//       link: "/quote",
+//       external: false,
+//       color: "bg-blue-600 hover:bg-blue-700"
+//     }
+//   ];
+
+//   return (
+//     <section className="py-20 md:py-20 mt-4 bg-gradient-to-b from-gray-100 to-white">
+//       <div className="max-w-6xl mx-auto px-6">
+//         {/* Header Section */}
+//         <div className="text-center mb-16">
+//           <h2 className="text-5xl font-bold text-gray-800 mb-4">
+//             Contact <span className="text-red-600">Us</span>
+//           </h2>
+//           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+//             Get in touch with us for comfortable and reliable travel solutions
+//           </p>
+//         </div>
+
+//         <div className="grid p-1 lg:grid-cols-2 gap-12">
+//           {/* Contact Information */}
+//           <div className="space-y-6">
+//             <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+//               <h3 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+              
+//               <div className="space-y-6">
+//                 {contactInfo.map((item, index) => (
+//                   <div key={index} className="flex items-start gap-4">
+//                     <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-xl">
+//                       {item.icon}
+//                     </div>
+//                     <div className="flex-1">
+//                       <h4 className="font-semibold text-gray-800 mb-1">{item.title}</h4>
+//                       {item.secondary ? (
+//                         <div className="space-y-1">
+//                           <a 
+//                             href={item.link} 
+//                             className="text-gray-700 hover:text-red-600 transition-colors block text-lg font-medium"
+//                           >
+//                             {item.value}
+//                           </a>
+//                           <a 
+//                             href={item.secondary.link} 
+//                             className="text-gray-600 hover:text-red-600 transition-colors block"
+//                           >
+//                             {item.secondary.value}
+//                           </a>
+//                         </div>
+//                       ) : item.link ? (
+//                         <a 
+//                           href={item.link} 
+//                           className="text-gray-700 hover:text-red-600 transition-colors block text-lg font-medium"
+//                           target={item.link.includes('http') ? '_blank' : '_self'}
+//                           rel={item.link.includes('http') ? 'noopener noreferrer' : ''}
+//                         >
+//                           {item.value}
+//                         </a>
+//                       ) : (
+//                         <p className="text-gray-700 text-lg font-medium">{item.value}</p>
+//                       )}
+//                     </div>
+//                   </div>
+//                 ))}
+//               </div>
+
+//               {/* Operating Hours */}
+//               <div className="mt-8 pt-6 border-t border-gray-200">
+//                 <h4 className="font-semibold text-gray-800 mb-3">Operating Hours</h4>
+//                 <div className="space-y-2 text-gray-700">
+//                   <div className="flex justify-between">
+//                     <span>Monday - Sunday</span>
+//                     <span className="font-medium">24/7 Available</span>
+//                   </div>
+//                   <div className="flex justify-between">
+//                     <span>Emergency Service</span>
+//                     <span className="font-medium text-green-600">Always On</span>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+
+//           {/* Quick Actions & Map */}
+//           <div className="space-y-6">
+//             {/* Quick Actions */}
+//             <div className="grid grid-cols-2 gap-4">
+//               {quickActions.map((action, index) => (
+//                 action.external ? (
+//                   <a
+//                     key={index}
+//                     href={action.link}
+//                     className={`${action.color} text-white rounded-xl p-4 text-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg`}
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                   >
+//                     <div className="text-2xl mb-2">{action.icon}</div>
+//                     <div className="font-bold text-sm mb-1">{action.title}</div>
+//                     <div className="text-xs opacity-90">{action.description}</div>
+//                   </a>
+//                 ) : (
+//                   <Link
+//                     key={index}
+//                     to={action.link}
+//                     className={`${action.color} text-white rounded-xl p-4 text-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg`}
+//                   >
+//                     <div className="text-2xl mb-2">{action.icon}</div>
+//                     <div className="font-bold text-sm mb-1">{action.title}</div>
+//                     <div className="text-xs opacity-90">{action.description}</div>
+//                   </Link>
+//                 )
+//               ))}
+//             </div>
+
+//             {/* Map Section */}
+//             <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+//               <h3 className="text-xl font-bold text-gray-800 mb-4">Our Location</h3>
+//               <div className="bg-gray-200 rounded-xl h-64 flex items-center justify-center relative overflow-hidden">
+//                 {/* Placeholder for Map */}
+//                 <div className="text-center text-gray-600">
+//                   <div className="text-4xl mb-2">📍</div>
+//                   <p className="font-semibold">Hingane Home Colony</p>
+//                   <p className="text-sm">Karve Nagar, Pune 411052</p>
+//                   <a 
+//                     href="https://maps.google.com/?q=Hingane+Home+Colony,Karve+Nagar,Pune+411052"
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                     className="inline-block mt-3 bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors"
+//                   >
+//                     Open in Google Maps
+//                   </a>
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* Emergency Contact */}
+//             <div className="bg-gradient-to-r from-red-600 to-orange-500 rounded-2xl p-6 text-white text-center">
+//               <div className="text-2xl mb-2">🚨</div>
+//               <h4 className="font-bold text-lg mb-2">Emergency Service</h4>
+//               <p className="text-sm opacity-90 mb-3">24/7 available for urgent bookings</p>
+//               <a 
+//                 href="tel:+919765494008"
+//                 className="bg-white text-red-600 px-6 py-2 rounded-full font-bold text-sm hover:bg-gray-100 transition-colors inline-block"
+//               >
+//                 Call Emergency
+//               </a>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Bottom CTA */}
+//         <div className="text-center mt-16">
+//           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+//             <h3 className="text-2xl font-bold text-gray-800 mb-3">Ready to Book Your Journey?</h3>
+//             <p className="text-gray-600 mb-6">Contact us now for the best travel experience in Pune</p>
+//             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+//               <a 
+//                 href="tel:+919765494008"
+//                 className="bg-red-600 text-white px-8 py-4 rounded-full font-bold hover:bg-red-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+//               >
+//                 📞 Call +91 97654 94008
+//               </a>
+//               <a 
+//                 href="https://wa.me/919765494008"
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-full font-bold hover:bg-green-600 hover:text-white transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2"
+//               >
+//                 💬 WhatsApp Us
+//               </a>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -290,43 +532,43 @@ export default function Contact() {
   ];
 
   return (
-    <section className="py-20 md:py-20 mt-4 bg-gradient-to-b from-gray-100 to-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-12 md:py-20 mt-14 bg-gradient-to-b from-gray-100 to-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-gray-800 mb-4">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 md:mb-4">
             Contact <span className="text-red-600">Us</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
             Get in touch with us for comfortable and reliable travel solutions
           </p>
         </div>
 
-        <div className="grid p-1 lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
           {/* Contact Information */}
-          <div className="space-y-6">
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+          <div className="space-y-4 md:space-y-6">
+            <div className="bg-white rounded-xl md:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg border border-gray-200">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 md:mb-6">Contact Information</h3>
               
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6">
                 {contactInfo.map((item, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-xl">
+                  <div key={index} className="flex items-start gap-3 sm:gap-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl flex-shrink-0">
                       {item.icon}
                     </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-gray-800 mb-1">{item.title}</h4>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-semibold text-gray-800 mb-0.5 sm:mb-1 text-sm sm:text-base">{item.title}</h4>
                       {item.secondary ? (
-                        <div className="space-y-1">
+                        <div className="space-y-0.5 sm:space-y-1">
                           <a 
                             href={item.link} 
-                            className="text-gray-700 hover:text-red-600 transition-colors block text-lg font-medium"
+                            className="text-gray-700 hover:text-red-600 transition-colors block text-sm sm:text-base md:text-lg font-medium break-words"
                           >
                             {item.value}
                           </a>
                           <a 
                             href={item.secondary.link} 
-                            className="text-gray-600 hover:text-red-600 transition-colors block"
+                            className="text-gray-600 hover:text-red-600 transition-colors block text-xs sm:text-sm break-words"
                           >
                             {item.secondary.value}
                           </a>
@@ -334,14 +576,14 @@ export default function Contact() {
                       ) : item.link ? (
                         <a 
                           href={item.link} 
-                          className="text-gray-700 hover:text-red-600 transition-colors block text-lg font-medium"
+                          className="text-gray-700 hover:text-red-600 transition-colors block text-sm sm:text-base md:text-lg font-medium break-words"
                           target={item.link.includes('http') ? '_blank' : '_self'}
                           rel={item.link.includes('http') ? 'noopener noreferrer' : ''}
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <p className="text-gray-700 text-lg font-medium">{item.value}</p>
+                        <p className="text-gray-700 text-sm sm:text-base md:text-lg font-medium break-words">{item.value}</p>
                       )}
                     </div>
                   </div>
@@ -349,9 +591,9 @@ export default function Contact() {
               </div>
 
               {/* Operating Hours */}
-              <div className="mt-8 pt-6 border-t border-gray-200">
-                <h4 className="font-semibold text-gray-800 mb-3">Operating Hours</h4>
-                <div className="space-y-2 text-gray-700">
+              <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-gray-200">
+                <h4 className="font-semibold text-gray-800 mb-2 md:mb-3 text-sm sm:text-base">Operating Hours</h4>
+                <div className="space-y-1.5 sm:space-y-2 text-gray-700 text-xs sm:text-sm">
                   <div className="flex justify-between">
                     <span>Monday - Sunday</span>
                     <span className="font-medium">24/7 Available</span>
@@ -366,50 +608,49 @@ export default function Contact() {
           </div>
 
           {/* Quick Actions & Map */}
-          <div className="space-y-6">
+          <div className="space-y-4 md:space-y-6">
             {/* Quick Actions */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4">
               {quickActions.map((action, index) => (
                 action.external ? (
                   <a
                     key={index}
                     href={action.link}
-                    className={`${action.color} text-white rounded-xl p-4 text-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg`}
+                    className={`${action.color} text-white rounded-lg sm:rounded-xl p-3 sm:p-4 text-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="text-2xl mb-2">{action.icon}</div>
-                    <div className="font-bold text-sm mb-1">{action.title}</div>
-                    <div className="text-xs opacity-90">{action.description}</div>
+                    <div className="text-xl sm:text-2xl mb-1 sm:mb-2">{action.icon}</div>
+                    <div className="font-bold text-xs sm:text-sm mb-0.5 sm:mb-1">{action.title}</div>
+                    <div className="text-[10px] sm:text-xs opacity-90 hidden sm:block">{action.description}</div>
                   </a>
                 ) : (
                   <Link
                     key={index}
                     to={action.link}
-                    className={`${action.color} text-white rounded-xl p-4 text-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg`}
+                    className={`${action.color} text-white rounded-lg sm:rounded-xl p-3 sm:p-4 text-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg`}
                   >
-                    <div className="text-2xl mb-2">{action.icon}</div>
-                    <div className="font-bold text-sm mb-1">{action.title}</div>
-                    <div className="text-xs opacity-90">{action.description}</div>
+                    <div className="text-xl sm:text-2xl mb-1 sm:mb-2">{action.icon}</div>
+                    <div className="font-bold text-xs sm:text-sm mb-0.5 sm:mb-1">{action.title}</div>
+                    <div className="text-[10px] sm:text-xs opacity-90 hidden sm:block">{action.description}</div>
                   </Link>
                 )
               ))}
             </div>
 
             {/* Map Section */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Our Location</h3>
-              <div className="bg-gray-200 rounded-xl h-64 flex items-center justify-center relative overflow-hidden">
-                {/* Placeholder for Map */}
-                <div className="text-center text-gray-600">
-                  <div className="text-4xl mb-2">📍</div>
-                  <p className="font-semibold">Hingane Home Colony</p>
-                  <p className="text-sm">Karve Nagar, Pune 411052</p>
+            <div className="bg-white rounded-xl md:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg border border-gray-100">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-3 sm:mb-4">Our Location</h3>
+              <div className="bg-gray-200 rounded-lg sm:rounded-xl h-48 sm:h-56 md:h-64 flex items-center justify-center relative overflow-hidden">
+                <div className="text-center text-gray-600 p-4">
+                  <div className="text-3xl sm:text-4xl mb-2">📍</div>
+                  <p className="font-semibold text-sm sm:text-base">Hingane Home Colony</p>
+                  <p className="text-xs sm:text-sm">Karve Nagar, Pune 411052</p>
                   <a 
                     href="https://maps.google.com/?q=Hingane+Home+Colony,Karve+Nagar,Pune+411052"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-3 bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors"
+                    className="inline-block mt-2 sm:mt-3 bg-red-600 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-semibold hover:bg-red-700 transition-colors"
                   >
                     Open in Google Maps
                   </a>
@@ -418,13 +659,13 @@ export default function Contact() {
             </div>
 
             {/* Emergency Contact */}
-            <div className="bg-gradient-to-r from-red-600 to-orange-500 rounded-2xl p-6 text-white text-center">
-              <div className="text-2xl mb-2">🚨</div>
-              <h4 className="font-bold text-lg mb-2">Emergency Service</h4>
-              <p className="text-sm opacity-90 mb-3">24/7 available for urgent bookings</p>
+            <div className="bg-gradient-to-r from-red-600 to-orange-500 rounded-xl md:rounded-2xl p-4 sm:p-5 md:p-6 text-white text-center">
+              <div className="text-xl sm:text-2xl mb-1 sm:mb-2">🚨</div>
+              <h4 className="font-bold text-base sm:text-lg mb-1 sm:mb-2">Emergency Service</h4>
+              <p className="text-xs sm:text-sm opacity-90 mb-2 sm:mb-3">24/7 available for urgent bookings</p>
               <a 
                 href="tel:+919765494008"
-                className="bg-white text-red-600 px-6 py-2 rounded-full font-bold text-sm hover:bg-gray-100 transition-colors inline-block"
+                className="bg-white text-red-600 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full font-bold text-xs sm:text-sm hover:bg-gray-100 transition-colors inline-block"
               >
                 Call Emergency
               </a>
@@ -433,14 +674,14 @@ export default function Contact() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-            <h3 className="text-2xl font-bold text-gray-800 mb-3">Ready to Book Your Journey?</h3>
-            <p className="text-gray-600 mb-6">Contact us now for the best travel experience in Pune</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="text-center mt-10 md:mt-16">
+          <div className="bg-white rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg border border-gray-100">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2 sm:mb-3">Ready to Book Your Journey?</h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Contact us now for the best travel experience in Pune</p>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">
               <a 
                 href="tel:+919765494008"
-                className="bg-red-600 text-white px-8 py-4 rounded-full font-bold hover:bg-red-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                className="bg-red-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold hover:bg-red-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 text-sm sm:text-base"
               >
                 📞 Call +91 97654 94008
               </a>
@@ -448,7 +689,7 @@ export default function Contact() {
                 href="https://wa.me/919765494008"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-full font-bold hover:bg-green-600 hover:text-white transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2"
+                className="border-2 border-green-600 text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold hover:bg-green-600 hover:text-white transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 text-sm sm:text-base"
               >
                 💬 WhatsApp Us
               </a>

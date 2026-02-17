@@ -45,7 +45,7 @@ export default function Services() {
     },
     { 
       name: "20 Seater A/C Bus", 
-      img: "https://heritagecabs.in/assets/uploads/product_images/20-Seater-Bus-Hire-Jaipur.jpg",
+      img: "https://5.imimg.com/data5/SELLER/Default/2025/4/506692837/OT/LM/WM/36386207/20-seater-luxury-tempo-traveler-rental.jpg",
       features: ["AC", "Premium", "Entertainment"],
       seats: 20,
       ac: true,

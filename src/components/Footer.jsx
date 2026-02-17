@@ -34,7 +34,6 @@ const Footer = () => {
     "12 seater bus on rent in Pune",
     "22 Seater bus hire in Pune",
     "26 seater Tempo traveller on rent",
-    "Force Urbania on rent in Pune",
     "Mini Bus hire in Pune",
     "Tourist Bus on hire in Pune"
   ];
@@ -216,7 +215,7 @@ const Footer = () => {
 
         {/* Full Keywords Strip */}
         <div className="border-t border-gray-800 pt-8 mb-8">
-          <h4 className="text-white font-semibold mb-4 text-center">Find Us</h4>
+          <h4 className="text-white font-semibold mb-4 text-center">Find Us🔎</h4>
           <div className="flex flex-wrap justify-center gap-2">
             {busTypes.concat(services).concat(locations).slice(0, 30).map((item, index) => (
               <a

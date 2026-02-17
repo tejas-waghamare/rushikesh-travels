@@ -612,7 +612,7 @@ export default function Navbar() {
       >
         {/* Backdrop */}
         <div 
-          className={`absolute inset-0 bg-black/30 backdrop-blur-sm transition-opacity duration-500 ${
+          className={`absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-500 ${
             isOpen ? "opacity-100" : "opacity-0"
           }`}
           onClick={closeMenu}
@@ -620,7 +620,7 @@ export default function Navbar() {
         
         {/* Menu Panel */}
         <div
-          className={`absolute right-0 top-0 h-full w-full max-w-sm bg-white/50 shadow-2xl transform transition-transform duration-500 ease-out ${
+          className={`absolute right-0 top-0 h-full w-full max-w-sm bg-white/80 shadow-2xl transform transition-transform duration-500 ease-out ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >

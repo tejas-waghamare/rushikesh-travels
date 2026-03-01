@@ -17,16 +17,22 @@ import { useState } from "react";
 import GalleryGrid from "../components/GalleryGrid";
 import bus1 from "../assets/interior/17seat.jpeg"
 import bus2 from "../assets/interior/comseat.jpeg"
+import bus3 from "../assets/interior/luxury.jpeg"
+import bus4 from "../assets/interior/standard.jpeg"
+import bus7 from "../assets/interior/travel.jpeg"
+import bus6 from "../assets/interior/clean.jpeg"
+
+
 export default function Gallery() {
   const images = [
     { src: bus1, category: "luxury", title: "Premium AC Coach" },
     { src: bus2, category: "standard", title: "Comfortable Seating" },
-    { src: "/bus3.jpg", category: "luxury", title: "Spacious Interior" },
-    { src: "/bus4.jpg", category: "standard", title: "Reliable Fleet" },
-    { src: "/bus5.jpg", category: "interior", title: "Modern Dashboard" },
-    { src: "/bus6.jpg", category: "interior", title: "Clean & Maintained" },
-    { src: "/bus7.jpg", category: "luxury", title: "Executive Travel" },
-    { src: "/bus8.jpg", category: "standard", title: "Group Travel" }
+    { src: bus3, category: "luxury", title: "Spacious Interior" },
+    { src: bus4, category: "standard", title: "Reliable Fleet" },
+    // { src: "/bus5.jpg", category: "interior", title: "Modern Dashboard" },
+    { src: bus6, category: "interior", title: "Clean & Maintained" },
+    { src: bus7, category: "luxury", title: "Executive Travel" },
+    // { src: "/bus8.jpg", category: "standard", title: "Group Travel" }
   ];
 
   const categories = [

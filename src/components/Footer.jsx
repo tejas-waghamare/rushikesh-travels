@@ -19,6 +19,7 @@ const Footer = () => {
     "13 seater Tempo Traveller on rent in Pune",
     "Non A/C bus rental in Pune",
     "A/C Bus rental in Pune",
+    "Urbania on rent in Pune",
     "Luxury Bus rental in Pune",
     "Tempo Traveller on rent in Pune",
     "14 seater bus on rent in Pune",
@@ -51,7 +52,8 @@ const Footer = () => {
     "Bus Rental For Wedding in Pune",
     "Monthly Bus hire service in Pune",
     "Tourist bus rental services in Pune",
-    "Bus hire for Corporate travel in Pune"
+    "Bus hire for Corporate travel in Pune",
+    "Urbania hire in pune"
   ];
 
   const locations = [
@@ -73,7 +75,8 @@ const Footer = () => {
     "Bus hire for Kedarnath Trip",
     "Bus hire for Devkund",
     "Bus hire for Akkalkot",
-    "Bus Hire for Sade Teen Shakti peeth"
+    "Bus Hire for Sade Teen Shakti peeth",
+    "Urbania for tour"
   ];
 
 
